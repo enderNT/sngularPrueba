@@ -18,11 +18,12 @@ class Series {
 
     fibonnacci (f) {
         const toInt = parseInt(f, 10)
-        this.fib = toInt
-        if (toInt <= 1) {
+        const abs = Math.abs(toInt)
+        this.fib = abs
+        if (abs <= 1) {
             return this.fib
         }
-        return this.fibonnacci(toInt-1) + this.fibonnacci(toInt-2)
+        return this.fibonnacci(abs-1) + this.fibonnacci(abs-2)
     }
 
     triangular (t) {
@@ -34,11 +35,12 @@ class Series {
 
     primo (p) {
         const toInt = parseInt(p, 10)
-        this.pri = toInt
-        if (toInt <= 1) {
+        const abs = Math.abs(toInt)
+        this.pri = abs
+        if (abs <= 1) {
             return this.pri
         }
-        return (this.pri * this.primo(toInt - 1));
+        return (this.pri * this.primo(abs - 1));
     }
 }
 

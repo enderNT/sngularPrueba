@@ -10,11 +10,11 @@ const useCalculo = () => {
         e.preventDefault()
         const serieN = new Series(num)
         setResult(serieN.calcular())
-        console.log("CALCULADO :D")
+        // console.log("CALCULADO :D")
     }
 
     const changeN = (e) => {
-        const {value} = e.target
+        const { value } = e.target
         let parsed = parseInt(value, 10)
         if (isNaN(parsed) || parsed < 0) {
             setNum(0)
